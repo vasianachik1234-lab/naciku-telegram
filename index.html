@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Naciku Hotel SPA Bukovel — преміальний відпочинок у Карпатах з теплим басейном, панорамною сауною, новими номерами та прямим бронюванням зі знижкою 5-15%." />
+  <title>Naciku Hotel SPA Bukovel</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Naciku Hotel SPA Bukovel" />
+  <meta property="og:description" content="Преміальний відпочинок у серці Карпат: теплий басейн під відкритим небом, панорамна сауна, нові номери та прямі знижки 5-15%." />
+  <meta property="og:image" content="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Naciku Hotel SPA Bukovel" />
+  <meta name="twitter:description" content="Преміальні басейн, SPA та новий сервіс із прямими знижками 5-15% для гостей Буковеля." />
+  <meta name="twitter:image" content="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" />
+  <link rel="image_src" href="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #0d0d0d;
+      --graphite: #111218;
+      --gold: #d4af37;
+      --gold-soft: rgba(212, 175, 55, 0.18);
+      --text: #f5f5f5;
+      --muted: #c8c8d0;
+      --card: #121319;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.06), transparent 25%),
+        radial-gradient(circle at 80% 0%, rgba(212, 175, 55, 0.07), transparent 25%),
+        var(--black);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(10px);
+      background: rgba(13, 13, 13, 0.78);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+    .logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.22);
+    }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .nav-links a {
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.2s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(10, 10, 10, 0.85), rgba(17, 18, 24, 0.75)),
+        url('https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg') center/cover;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.12), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1), transparent 35%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    #snow {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 820px;
+      padding: 0 18px;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(17, 18, 24, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.1;
+      margin: 10px 0;
+      color: var(--gold);
+      text-shadow: 0 8px 45px rgba(212, 175, 55, 0.35);
+    }
+    .subhead {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 26px;
+      line-height: 1.7;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      color: var(--black);
+      background: linear-gradient(135deg, #f5d97f, var(--gold), #b98a16);
+      box-shadow: 0 20px 45px rgba(212, 175, 55, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 24px 55px rgba(212, 175, 55, 0.5);
+    }
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 22px;
+      position: relative;
+    }
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 14px;
+      color: var(--gold);
+    }
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 32px;
+      max-width: 720px;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      background: linear-gradient(145deg, rgba(17, 18, 24, 0.95), rgba(13, 13, 13, 0.95));
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(150deg, rgba(212, 175, 55, 0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .image-block {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      box-shadow: var(--shadow);
+    }
+    .image-block img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 420px;
+      filter: saturate(1.02) contrast(1.08);
+    }
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      margin-bottom: 12px;
+    }
+    .room-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .room-card img {
+      border-radius: 14px;
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: var(--shadow);
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      background: linear-gradient(145deg, rgba(17, 18, 24, 0.95), rgba(13, 13, 13, 0.95));
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 540px;
+    }
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+    }
+    th {
+      color: var(--gold);
+      font-weight: 700;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      background: rgba(212, 175, 55, 0.05);
+    }
+    tr:not(:last-child) td {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    td {
+      color: var(--muted);
+    }
+    .floating-book {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      z-index: 98;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #f5d97f, var(--gold), #b98a16);
+      box-shadow: 0 18px 36px rgba(212, 175, 55, 0.35);
+      color: var(--black);
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .floating-book:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 24px 50px rgba(212, 175, 55, 0.5);
+    }
+    .form-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    input, select, textarea {
+      width: 100%;
+      background: rgba(17, 18, 24, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-family: 'Manrope', sans-serif;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+    }
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .status {
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 14px;
+    }
+    .price-line {
+      margin-top: 10px;
+      padding: 12px 14px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 12px;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .price-line strong { color: var(--gold); }
+    .checkbox-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .checkbox-row input { width: auto; margin-top: 3px; }
+    .call-widget {
+      position: fixed;
+      right: 18px;
+      bottom: 92px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.9);
+      color: #0b0b0b;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 18px 36px rgba(212, 175, 55, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      z-index: 97;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .call-widget:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 24px 50px rgba(212, 175, 55, 0.48);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 22px;
+      align-items: center;
+    }
+    .gallery-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .gallery-row img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: var(--shadow);
+    }
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .quote {
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    footer {
+      padding: 40px 22px 60px;
+      text-align: center;
+      color: var(--muted);
+      background: #0b0b0b;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    @keyframes fadeUp {
+      from {
+        transform: translateY(18px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .section {
+        padding: 70px 18px;
+      }
+      .hero {
+        height: 86vh;
+      }
+      .floating-book {
+        width: 58px;
+        height: 58px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img class="logo-img" src="https://static.tildacdn.com/tild6438-6330-4264-b034-386530613831/ChatGPT_Image_21__20.png" alt="Naciku Hotel SPA Bukovel логотип" />
+        <span>Naciku Hotel SPA Bukovel</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">Про готель</a>
+        <a href="#rooms">Номери</a>
+        <a href="#pools">Басейни</a>
+        <a href="#rates">Тарифи</a>
+        <a href="#booking">Бронювання</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <canvas id="snow"></canvas>
+    <div class="hero-content">
+      <div class="eyebrow">Буковель · Люкс · SPA</div>
+      <h1>Naciku Hotel SPA Bukovel</h1>
+      <p class="subhead">Преміальний відпочинок у серці Карпат: теплі басейни, панорамна сауна, нові номери та повністю оновлений сервіс рівня люкс. Попередні відгуки неактуальні — стартуємо по-новому й по-преміальному.</p>
+      <a class="btn" href="#booking">Забронювати</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" aria-label="SEO-відпочинок у Буковелі">
+      <h2 class="section-title">Відпочинок у Буковелі з прямим бронюванням</h2>
+      <p class="section-sub">Обирайте Naciku Hotel SPA Bukovel для преміальної зими в Карпатах: теплий басейн під відкритим небом, панорамна сауна та нові номери з деревом і золотими акцентами. Бронюйте напряму на сайті й отримуйте знижку 5–15% без посередників.</p>
+      <div class="grid grid-3">
+        <div class="card reveal"><h3>SEO-ключі: Буковель · готель · SPA</h3><p>Оптимізований контент під запити «відпочинок у Буковелі», «теплий басейн Буковель», «преміальний готель Буковель зі SPA».</p></div>
+        <div class="card reveal"><h3>Прямі знижки</h3><p>Бронюйте напряму — застосовуємо 5–15% знижки залежно від кількості ночей і фіксуємо кращу ціну.</p></div>
+        <div class="card reveal"><h3>Підйомник №1 поруч</h3><p>Трансфер до готелю чи першого підйомника, власна лижна кімната з прокатом і сушкою екіпірування.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Бронювання</h2>
+          <p class="section-sub">Залиште запит — підтвердимо ваш приїзд у Telegram. До 29 грудня відкриті сніданки, ігрова зала, чани та сауна; теплий басейн під відкритим небом і SPA запускаємо 29 грудня. Пряме бронювання на сайті: знижка 5–15%.</p>
+          <form class="booking-form" id="booking-form-top">
+            <div class="form-grid">
+              <div>
+                <label for="name-top">Ім'я</label>
+                <input id="name-top" name="name" required placeholder="Ваше ім'я" />
+              </div>
+              <div>
+                <label for="phone-top">Телефон</label>
+                <input id="phone-top" name="phone" required placeholder="+380..." />
+              </div>
+              <div>
+                <label for="checkin-top">Дата заїзду</label>
+                <input id="checkin-top" name="checkin" type="date" required />
+              </div>
+              <div>
+                <label for="checkout-top">Дата виїзду</label>
+                <input id="checkout-top" name="checkout" type="date" required />
+              </div>
+              <div>
+                <label for="room-top">Тип номера</label>
+                <select id="room-top" name="room" required>
+                  <option value="Deluxe 2-місний">Deluxe 2-місний</option>
+                  <option value="Deluxe 3-місний">Deluxe 3-місний</option>
+                  <option value="Оновлений Deluxe 2-місний">Оновлений Deluxe 2-місний</option>
+                  <option value="Оновлений Deluxe 3-місний">Оновлений Deluxe 3-місний</option>
+                </select>
+              </div>
+              <div>
+                <label for="guests-top">Кількість гостей</label>
+                <select id="guests-top" name="guests" required>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+            </div>
+            <div style="margin-top:14px;">
+              <label for="comment-top">Коментар</label>
+              <textarea id="comment-top" name="comment" placeholder="Побажання або питання"></textarea>
+            </div>
+            <div class="price-line">
+              <div>Базова сума: <strong class="base-price">—</strong></div>
+              <div>Знижка за пряме бронювання: <strong class="discount">—</strong></div>
+              <div>До оплати: <strong class="total">—</strong></div>
+              <small class="price-note">Прайс розраховано з урахуванням кількості ночей та ваших дат.</small>
+            </div>
+            <label class="checkbox-row"><input type="checkbox" required name="included-top" /> <span>Підтверджую, що ознайомився з тим, що у вартість включені сніданки, ігрова зала, чани та сауна; теплий басейн і SPA працюють з 29 грудня.</span></label>
+            <label class="checkbox-row"><input type="checkbox" required name="privacy-top" /> <span>Погоджуюся з політикою конфіденційності та обробкою контактних даних для бронювання.</span></label>
+            <button class="btn" type="submit" style="margin-top:16px;">Надіслати в Telegram</button>
+            <div class="status"></div>
+          </form>
+        </div>
+        <div class="card reveal">
+          <h3>Сезонні оновлення</h3>
+          <p>Теплий басейн та SPA відкриваємо 29 грудня. До цієї дати у вартість включені сніданки, ігрова зала, чани й сауна.</p>
+          <p class="tag">Новий ресторан</p>
+          <p>Відкрили оновлений ресторан із карпатськими стравами та смачними сніданками для гостей.</p>
+          <p class="tag">Новорічна програма</p>
+          <p>Плануємо вечір із ведучими, карпатським застіллям, подарунками та розвагами на всю ніч.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">Про готель</h2>
+      <p class="section-sub">Готель у серці Буковеля: окремий простір біля підйомника №1, сучасні номери з деревом і м’яким світлом, цілковита приватність та преміальний сервіс, який ми повністю оновили. Додаємо новий ресторан з карпатськими стравами, теплу атмосферу й персональний супровід кожного гостя. Забезпечуємо трансфер до готелю або до першого підйомника за додаткову оплату зі знижкою для гостей, а також власну лижну кімнату з прокатом, сушкою та зберіганням інвентарю.</p>
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <span class="tag">2 басейни з підігрівом</span>
+          <h3>Теплий басейн під відкритим небом</h3>
+          <p>Пара над водою, підсвітка і зимові краєвиди Карпат створюють ефект гірського спа-курорту.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Панорамна сауна</span>
+          <h3>3×3 зі снігом</h3>
+          <p>Скляна стіна з видом на ялинки, контраст зі снігом та м'яке амбієнтне світло.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Ігрова кімната</span>
+          <h3>PS5 · більярд · аерохокей</h3>
+          <p>Преміальний лаунж для вечірніх ігор, коктейлів та відпочинку всією компанією.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="amenities">
+      <h2 class="section-title">Сервіс та включення</h2>
+      <p class="section-sub">Бронюйте в Naciku Hotel SPA Bukovel і відпочивайте повністю — ми продумали кожну деталь для вашого комфорту.</p>
+      <div class="card reveal">
+        <ul>
+          <li>Оренда лижного спорядження доступна на місці.</li>
+          <li>Чани та сауну можна бронювати окремо за додаткову оплату.</li>
+          <li>SPA-зоною безкоштовно користуються гості, що проживають у готелі.</li>
+          <li>Ігрова зала для проживаючих гостей — безкоштовно.</li>
+          <li>Зручний паркінг підходить для будь-якої машини.</li>
+          <li>Сніданок по системі «шведська лінія» входить у вартість номера.</li>
+          <li>У кожному номері: фен, сейф, холодильник, чайник, чай, кава та предмети особистої гігієни.</li>
+          <li>Усі номери мають власні балкони.</li>
+          <li>Власна пральня — прання речей за додаткову оплату.</li>
+          <li>Мангальна зона доступна за додаткову оплату.</li>
+          <li>Лаундж-зона з PS5, музикою, коктейлями та комфортним світлом.</li>
+          <li>До підйомника №1 всього 800 м.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="rooms">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Номери</h2>
+          <p class="section-sub">Стильні, теплі та сучасні кімнати з деревом, м'якою підсвіткою і мінімалістичним декором.</p>
+          <div class="grid grid-3">
+            <div class="card room-card reveal">
+              <img src="https://static.tildacdn.com/tild6666-6265-4830-b134-363761373364/IMG_0177.jpeg" alt="Делюкс 2" />
+              <h3>Делюкс 2</h3>
+              <p>Дизайн з натуральним деревом, king-size ліжко та тиха тераса.</p>
+            </div>
+            <div class="card room-card reveal">
+              <img src="https://static.tildacdn.com/tild6663-6430-4265-b530-343031626139/IMG_0181.jpeg" alt="Делюкс 3" />
+              <h3>Делюкс 3</h3>
+              <p>Більше простору для компанії, преміальна постіль, панорамні вікна.</p>
+            </div>
+            <div class="card room-card reveal">
+              <img src="https://static.tildacdn.com/tild3065-3763-4564-b264-323261623839/IMG_0182.jpeg" alt="Оновлений Делюкс 2" />
+              <h3>Оновлений Делюкс 2</h3>
+              <p>Новий ремонт, арт-деталі, приховане освітлення та інтимний настрій.</p>
+            </div>
+            <div class="card room-card reveal">
+              <img src="https://static.tildacdn.com/tild3330-6165-4562-b439-313839356261/IMG_0184.jpeg" alt="Оновлений Делюкс 3" />
+              <h3>Оновлений Делюкс 3</h3>
+              <p>Розкішний простір зі столом для компанії, сучасна техніка та теплі кольори.</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-block reveal">
+          <img src="https://static.tildacdn.com/tild3330-6165-4562-b439-313839356261/IMG_0184.jpeg" alt="Преміальний номер Naciku Hotel SPA Bukovel" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pools">
+      <h2 class="section-title">Басейни з підігрівом</h2>
+      <p class="section-sub">Паруюча вода, вечірня підсвітка та засніжені ялинки поруч — головний wow-ефект Naciku Hotel SPA Bukovel. Теплий басейн під відкритим небом запускаємо з 29 грудня.</p>
+      <div class="image-block reveal">
+        <img src="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" alt="Теплий басейн та SPA Naciku Hotel SPA Bukovel" />
+      </div>
+    </section>
+
+    <section class="section" id="sauna">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Сауна та зона відпочинку</h2>
+          <p class="section-sub">Панорамна сауна 3×3 з деревом, м'яким світлом і вікном у зимовий ліс.</p>
+          <div class="grid grid-3">
+            <div class="card reveal"><h3>Панорама</h3><p>Скляна стіна з видом на засніжені вершини.</p></div>
+            <div class="card reveal"><h3>Контраст</h3><p>Сніг навколо для миттєвого охолодження після прогріву.</p></div>
+            <div class="card reveal"><h3>Лаунж</h3><p>Тихі лежаки, приглушене золоте світло, спокійний звук.</p></div>
+          </div>
+        </div>
+        <div class="image-block reveal">
+          <img src="https://static.tildacdn.com/tild6339-6230-4537-b731-356230313032/photo_2025-02-14_14-.jpg" alt="Сауна Naciku Hotel SPA Bukovel" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="jacuzzi">
+      <div class="two-col">
+        <div class="image-block reveal">
+            <img src="https://static.tildacdn.com/tild3162-3235-4633-b561-303532306161/photo_2025-02-14_14-.jpg" alt="Чани з підсвіткою" />
+        </div>
+        <div>
+          <h2 class="section-title">Джакузі з підсвіткою</h2>
+          <p class="section-sub">Вечірнє LED світло, сніг навколо та гідромасаж, що розслабляє після катання.</p>
+          <div class="grid grid-3">
+            <div class="card reveal"><h3>LED-підсвітка</h3><p>Тепле сяйво створює преміальну атмосферу.</p></div>
+            <div class="card reveal"><h3>Зимовий вид</h3><p>Бульбашки, пара і засніжені сосни довкола.</p></div>
+            <div class="card reveal"><h3>Приватність</h3><p>Затишні кабани та м'які пледи для повного релаксу.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="spa">
+      <h2 class="section-title">SPA зона</h2>
+      <p class="section-sub">Теплі тони, ароматні масла, спокійна музика та інтимне світло для глибокого релаксу. SPA-зону відкриваємо 29 грудня — до цього доступні чани, сауна та ігрова зала з включеними сніданками.</p>
+      <div class="gallery-row">
+        <img src="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" alt="SPA Naciku Hotel SPA Bukovel" class="reveal" />
+        <img src="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" alt="SPA інтер'єр Naciku Hotel SPA Bukovel" class="reveal" />
+        <img src="https://static.tildacdn.com/tild3533-3131-4539-b830-356465323436/_spa____1.jpg" alt="SPA відпочинок Naciku Hotel SPA Bukovel" class="reveal" />
+      </div>
+    </section>
+
+    <section class="section" id="games">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Ігрова кімната</h2>
+          <p class="section-sub">Преміальний лаунж із PS5, більярдом, аерохокеєм та настільним футболом.</p>
+          <div class="grid grid-3">
+            <div class="card reveal"><h3>PS5</h3><p>Найновіші релізи на великому екрані.</p></div>
+            <div class="card reveal"><h3>Більярд</h3><p>Професійний стіл, м'яке світло та музика.</p></div>
+            <div class="card reveal"><h3>Аерохокей</h3><p>Динамічні матчі з друзями у власному лаунжі.</p></div>
+          </div>
+        </div>
+        <div class="gallery-row reveal">
+          <img src="https://static.tildacdn.com/tild6131-3365-4462-a636-663131623438/photo_2025-02-11_14-.jpg" alt="Ігрова зала з більярдом" />
+          <img src="https://static.tildacdn.com/tild3236-3832-4130-b237-666338633531/photo_2025-02-11_14-.jpg" alt="Лаунж та ігрові столики Naciku Hotel SPA Bukovel" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rates">
+      <h2 class="section-title">Тарифи</h2>
+      <p class="section-sub">Актуальні тарифи з урахуванням прямих знижок і сезонності. Дані оновлені станом на 22 грудня 2025 року.</p>
+      <div class="table-wrapper reveal">
+        <table>
+          <thead>
+            <tr><th>Період</th><th>Deluxe 2-місний</th><th>Deluxe 3-місний</th><th>Оновлений Deluxe 2-місний</th><th>Оновлений Deluxe 3-місний</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2025-01-01 — 2025-12-10</td><td>2000 грн</td><td>2800 грн</td><td>2000 грн</td><td>2800 грн</td></tr>
+            <tr><td>2025-12-11 — 2025-12-24</td><td>2500 грн</td><td>3500 грн</td><td>2500 грн</td><td>3500 грн</td></tr>
+            <tr><td>2025-12-25 — 2025-12-29</td><td>4000 грн</td><td>4000 грн</td><td>4000 грн</td><td>4000 грн</td></tr>
+            <tr><td>2025-12-30 — 2025-12-31</td><td>9000 грн</td><td>12600 грн</td><td>9000 грн</td><td>12600 грн</td></tr>
+            <tr><td>2026-01-01 — 2026-01-10</td><td>6750 грн</td><td>9450 грн</td><td>6750 грн</td><td>9450 грн</td></tr>
+            <tr><td>2026-01-11 — 2026-01-20</td><td>5250 грн</td><td>7350 грн</td><td>5250 грн</td><td>7350 грн</td></tr>
+            <tr><td>2026-01-21 — 2026-02-15</td><td>4500 грн</td><td>6300 грн</td><td>4500 грн</td><td>6300 грн</td></tr>
+            <tr><td>2026-02-16 — 2026-02-28</td><td>3000 грн</td><td>4200 грн</td><td>3000 грн</td><td>4200 грн</td></tr>
+            <tr><td>2026-03-01 — 2026-03-31</td><td>2000 грн</td><td>2800 грн</td><td>2000 грн</td><td>2800 грн</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="direct">
+      <h2 class="section-title">Бронюйте напряму — гарантія кращої ціни</h2>
+      <p class="section-sub">Офіційний сайт Naciku Hotel SPA Bukovel: відразу показуємо повну вартість проживання, фіксуємо знижку 5–15% і надаємо пріоритетне підтвердження у Telegram.</p>
+      <div class="grid grid-3">
+        <div class="card reveal"><h3>Миттєвий підрахунок</h3><p>Форма автоматично рахує суму за вашими датами проживання та кількістю ночей.</p></div>
+        <div class="card reveal"><h3>Пакет включень</h3><p>Сніданки, ігрова зала, чани та сауна входять у вартість; теплий басейн і SPA працюють з 29 грудня.</p></div>
+        <div class="card reveal"><h3>Сервіс на зв’язку</h3><p>Адміністратор <a href="tel:+380974599086">+380 97 459 90 86</a> відповідає 24/7, допоможемо з трансфером (за додаткову оплату зі знижкою) та лижним прокатом.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="offers">
+      <h2 class="section-title">Акції</h2>
+      <div class="grid grid-3">
+        <div class="card reveal"><h3>-10% від 5 ночей</h3><p>Або -15% при бронюванні від 7 ночей. Ідеально для довгого відпочинку.</p></div>
+        <div class="card reveal"><h3>Рання бронь</h3><p>До -20% на дати раннього сезону. Фіксуйте кращу ціну зараз.</p></div>
+        <div class="card reveal"><h3>Подарункові сертифікати</h3><p>Преміальний подарунок для друзів та партнерів — виберіть суму та персоналізацію.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="newyear">
+      <h2 class="section-title">Новорічна програма</h2>
+      <p class="section-sub">Готуємо святкову ніч із ведучими, карпатським застіллям, подарунками та розвагами до ранку. Забронюйте заздалегідь, щоб зафіксувати місця.</p>
+      <div class="grid grid-3">
+        <div class="card reveal"><h3>Ведучі та музика</h3><p>Святковий сценарій, шоу-програма та діджей до ранку.</p></div>
+        <div class="card reveal"><h3>Карпатський стіл</h3><p>Фірмові локальні страви, закуски та сет напоїв для компанії.</p></div>
+        <div class="card reveal"><h3>Подарунки та забави</h3><p>Сюрпризи для гостей, конкурси й тематичний декор у стилі Bukovel Luxury.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <h2 class="section-title">Новий сервіс</h2>
+      <div class="reviews">
+        <div class="card reveal">
+          <h3>Перезапуск якості</h3>
+          <p class="quote">Ми повністю оновили сервіс і стандарти гостинності. Попередні відгуки неактуальні — відкриваємо нову сторінку преміального досвіду й чекаємо на ваші свіжі враження цієї зими.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Контакти</h2>
+          <p class="section-sub">Телефон: <a href="tel:+380974599086">+380 97 459 90 86</a><br>Email: <a href="mailto:info@naciku.com">info@naciku.com</a><br>Локація: Поляниця, Буковель, біля підйомника №1 (<a href="https://maps.app.goo.gl/Yp4RapMubpgEox4q8" target="_blank">Google Maps</a>)</p>
+          <div class="card reveal">
+            <h3>Як дістатися</h3>
+            <p>5 хвилин до підйомника №1, трансфер за запитом (за додаткову оплату зі знижкою), паркінг на території. Є лижна кімната з прокатом, сушкою та зберіганням інвентарю.</p>
+          </div>
+        </div>
+        <div class="image-block reveal">
+          <iframe title="Google Maps" src="https://www.google.com/maps?q=https://maps.app.goo.gl/Yp4RapMubpgEox4q8&output=embed" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking-bottom">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Бронювання</h2>
+          <p class="section-sub">Надішліть запит — ми підтвердимо бронювання через Telegram. Для прямих бронювань на сайті діють знижки 5–15% залежно від тривалості проживання.</p>
+          <form class="booking-form" id="booking-form-bottom">
+            <div class="form-grid">
+              <div>
+                <label for="name-bottom">Ім'я</label>
+                <input id="name-bottom" name="name" required placeholder="Ваше ім'я" />
+              </div>
+              <div>
+                <label for="phone-bottom">Телефон</label>
+                <input id="phone-bottom" name="phone" required placeholder="+380..." />
+              </div>
+              <div>
+                <label for="checkin-bottom">Дата заїзду</label>
+                <input type="date" id="checkin-bottom" name="checkin" required />
+              </div>
+              <div>
+                <label for="checkout-bottom">Дата виїзду</label>
+                <input type="date" id="checkout-bottom" name="checkout" required />
+              </div>
+              <div>
+                <label for="room-bottom">Тип номера</label>
+                <select id="room-bottom" name="room" required>
+                  <option value="Deluxe 2-місний">Deluxe 2-місний</option>
+                  <option value="Deluxe 3-місний">Deluxe 3-місний</option>
+                  <option value="Оновлений Deluxe 2-місний">Оновлений Deluxe 2-місний</option>
+                  <option value="Оновлений Deluxe 3-місний">Оновлений Deluxe 3-місний</option>
+                </select>
+              </div>
+              <div>
+                <label for="guests-bottom">Кількість гостей</label>
+                <select id="guests-bottom" name="guests" required>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+            </div>
+            <div style="margin-top:14px;">
+              <label for="comment-bottom">Коментар</label>
+              <textarea id="comment-bottom" name="comment" placeholder="Побажання або питання"></textarea>
+            </div>
+            <div class="price-line">
+              <div>Базова сума: <strong class="base-price">—</strong></div>
+              <div>Знижка за пряме бронювання: <strong class="discount">—</strong></div>
+              <div>До оплати: <strong class="total">—</strong></div>
+              <small class="price-note">Прайс розраховано з урахуванням кількості ночей та ваших дат.</small>
+            </div>
+            <label class="checkbox-row"><input type="checkbox" required name="included-bottom" /> <span>Підтверджую, що ознайомився з тим, що у вартість включені сніданки, ігрова зала, чани та сауна; теплий басейн і SPA працюють з 29 грудня.</span></label>
+            <label class="checkbox-row"><input type="checkbox" required name="privacy-bottom" /> <span>Погоджуюся з політикою конфіденційності та обробкою контактних даних для бронювання.</span></label>
+            <button class="btn" type="submit" style="margin-top:16px;">Надіслати в Telegram</button>
+            <div class="status"></div>
+          </form>
+        </div>
+        <div class="card reveal">
+          <h3>Що далі?</h3>
+          <p>Ми одразу отримуємо ваш запит у Telegram і підтверджуємо деталі бронювання.</p>
+          <p class="tag">Безпечно · Швидко · Преміально</p>
+          <p>Також допоможемо з трансфером (за додаткову оплату зі знижкою), ski-pass та індивідуальним сервісом.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="call-widget" href="tel:+380974599086" aria-label="Подзвонити адміністратору">☎</a>
+  <button class="floating-book" aria-label="Забронювати" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">★</button>
+  <footer>
+    © 2024 Naciku Hotel SPA Bukovel. Преміальний Bukovel Luxury.
+  </footer>
+
+  <script>
+    // Snow effect
+    const canvas = document.getElementById('snow');
+    const ctx = canvas.getContext('2d');
+    let flakes = [];
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = document.querySelector('.hero').offsetHeight;
+      flakes = Array.from({ length: 120 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2 + 1,
+        d: Math.random() * 1 + 0.5,
+      }));
+    }
+    function drawSnow() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      flakes.forEach((f) => {
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      moveFlakes();
+      requestAnimationFrame(drawSnow);
+    }
+    let angle = 0;
+    function moveFlakes() {
+      angle += 0.002;
+      flakes.forEach((f) => {
+        f.y += Math.pow(f.d, 2) + 0.5;
+        f.x += Math.sin(angle) * 0.6;
+        if (f.y > canvas.height) {
+          f.y = -5;
+          f.x = Math.random() * canvas.width;
+        }
+      });
+    }
+    window.addEventListener('resize', resize);
+    resize();
+    drawSnow();
+
+    // Reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    reveals.forEach((el) => observer.observe(el));
+
+    const ratePeriods = [
+      { from: '2025-01-01', to: '2025-12-10', prices: { 'Deluxe 2-місний': 2000, 'Deluxe 3-місний': 2800, 'Оновлений Deluxe 2-місний': 2000, 'Оновлений Deluxe 3-місний': 2800 } },
+      { from: '2025-12-11', to: '2025-12-24', prices: { 'Deluxe 2-місний': 2500, 'Deluxe 3-місний': 3500, 'Оновлений Deluxe 2-місний': 2500, 'Оновлений Deluxe 3-місний': 3500 } },
+      { from: '2025-12-25', to: '2025-12-29', prices: { 'Deluxe 2-місний': 4000, 'Deluxe 3-місний': 4000, 'Оновлений Deluxe 2-місний': 4000, 'Оновлений Deluxe 3-місний': 4000 } },
+      { from: '2025-12-30', to: '2025-12-31', prices: { 'Deluxe 2-місний': 9000, 'Deluxe 3-місний': 12600, 'Оновлений Deluxe 2-місний': 9000, 'Оновлений Deluxe 3-місний': 12600 } },
+      { from: '2026-01-01', to: '2026-01-10', prices: { 'Deluxe 2-місний': 6750, 'Deluxe 3-місний': 9450, 'Оновлений Deluxe 2-місний': 6750, 'Оновлений Deluxe 3-місний': 9450 } },
+      { from: '2026-01-11', to: '2026-01-20', prices: { 'Deluxe 2-місний': 5250, 'Deluxe 3-місний': 7350, 'Оновлений Deluxe 2-місний': 5250, 'Оновлений Deluxe 3-місний': 7350 } },
+      { from: '2026-01-21', to: '2026-02-15', prices: { 'Deluxe 2-місний': 4500, 'Deluxe 3-місний': 6300, 'Оновлений Deluxe 2-місний': 4500, 'Оновлений Deluxe 3-місний': 6300 } },
+      { from: '2026-02-16', to: '2026-02-28', prices: { 'Deluxe 2-місний': 3000, 'Deluxe 3-місний': 4200, 'Оновлений Deluxe 2-місний': 3000, 'Оновлений Deluxe 3-місний': 4200 } },
+      { from: '2026-03-01', to: '2026-03-31', prices: { 'Deluxe 2-місний': 2000, 'Deluxe 3-місний': 2800, 'Оновлений Deluxe 2-місний': 2000, 'Оновлений Deluxe 3-місний': 2800 } },
+    ];
+
+    function formatUAH(num) {
+      return new Intl.NumberFormat('uk-UA').format(num) + ' грн';
+    }
+
+    function parseGuests(value) {
+      if (!value) return 1;
+      if (value.trim() === '5+') return 5;
+      const parsed = parseInt(value, 10);
+      return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
+    }
+
+    const today = (() => {
+      const d = new Date();
+      d.setHours(0, 0, 0, 0);
+      return d;
+    })();
+
+    function formatInputDate(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    function addDays(date, days) {
+      const d = new Date(date);
+      d.setDate(d.getDate() + days);
+      return d;
+    }
+
+    function parseDate(value, endOfDay = false) {
+      if (!value) return null;
+      const date = new Date(`${value}T${endOfDay ? '23:59:59' : '00:00:00'}`);
+      return isNaN(date.getTime()) ? null : date;
+    }
+
+    const roomCapacity = {
+      'Deluxe 2-місний': 2,
+      'Deluxe 3-місний': 3,
+      'Оновлений Deluxe 2-місний': 2,
+      'Оновлений Deluxe 3-місний': 3,
+    };
+
+    function getRateInfo(checkin, room) {
+      const date = parseDate(checkin);
+      if (!date || !room) return null;
+      const period = ratePeriods.find((p) => {
+        const from = parseDate(p.from);
+        const to = parseDate(p.to, true);
+        return from && to && date >= from && date <= to;
+      });
+      if (!period) return null;
+      const rate = period.prices[room];
+      if (!rate) return null;
+      return { rate, period };
+    }
+
+    function calcPrice(data) {
+      const rateInfo = getRateInfo(data.checkin, data.room);
+      if (!rateInfo || !data.checkout) return null;
+      const checkin = parseDate(data.checkin);
+      const checkout = parseDate(data.checkout);
+      const guests = parseGuests(data.guests);
+      if (!checkin || !checkout || checkout <= checkin || checkin < today) return null;
+      const nights = Math.max(1, Math.round((checkout - checkin) / (1000 * 60 * 60 * 24)) || 0);
+      const capacity = roomCapacity[data.room] || 2;
+      const surchargeApplied = guests > capacity;
+      const baseWithGuests = Math.round(rateInfo.rate * nights * (surchargeApplied ? 1.35 : 1));
+      const discountRate = nights >= 7 ? 0.15 : nights >= 5 ? 0.1 : 0.05;
+      const discountValue = Math.round(baseWithGuests * discountRate);
+      const total = baseWithGuests - discountValue;
+      return {
+        base: baseWithGuests,
+        discountValue,
+        total,
+        nights,
+        discountRate,
+        period: rateInfo.period,
+        surchargeApplied,
+      };
+    }
+
+    function updateFormPrice(form) {
+      const data = Object.fromEntries(new FormData(form));
+      const priceEls = {
+        base: form.querySelector('.base-price'),
+        discount: form.querySelector('.discount'),
+        total: form.querySelector('.total'),
+      };
+      const noteEl = form.querySelector('.price-note');
+      const result = calcPrice(data);
+      if (result) {
+        priceEls.base.textContent = formatUAH(result.base);
+        priceEls.discount.textContent = `-${formatUAH(result.discountValue)} (${Math.round(result.discountRate * 100)}%)`;
+        priceEls.total.textContent = formatUAH(result.total);
+        if (noteEl) {
+          noteEl.textContent = result.surchargeApplied
+            ? 'Для додаткового гостя у цьому номері застосовано +35% до базового тарифу.'
+            : 'Прайс розраховано з урахуванням кількості ночей, гостей та ваших дат.';
+        }
+      } else {
+        priceEls.base.textContent = priceEls.discount.textContent = priceEls.total.textContent = '—';
+        if (noteEl) {
+          noteEl.textContent = 'Оберіть дати, номер і кількість гостей, щоб побачити точну вартість.';
+        }
+      }
+    }
+
+    // Booking form submission for both modules with price display
+    document.querySelectorAll('.booking-form').forEach((form) => {
+      const statusEl = form.querySelector('.status');
+      const checkinInput = form.querySelector('input[name="checkin"]');
+      const checkoutInput = form.querySelector('input[name="checkout"]');
+      const minCheckin = formatInputDate(today);
+
+      function syncDates() {
+        const parsedCheckin = parseDate(checkinInput.value);
+        const validCheckin = parsedCheckin && parsedCheckin >= today ? parsedCheckin : today;
+        const checkinStr = formatInputDate(validCheckin);
+        checkinInput.min = minCheckin;
+        if (!checkinInput.value || checkinInput.value < minCheckin) {
+          checkinInput.value = checkinStr;
+        }
+        const minCheckoutDate = addDays(validCheckin, 1);
+        const minCheckoutStr = formatInputDate(minCheckoutDate);
+        checkoutInput.min = minCheckoutStr;
+        if (!checkoutInput.value || checkoutInput.value < minCheckoutStr) {
+          checkoutInput.value = minCheckoutStr;
+        }
+      }
+
+      syncDates();
+      checkinInput.addEventListener('change', () => {
+        syncDates();
+        updateFormPrice(form);
+      });
+      checkoutInput.addEventListener('change', () => updateFormPrice(form));
+      form.addEventListener('input', () => updateFormPrice(form));
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        updateFormPrice(form);
+        const data = Object.fromEntries(new FormData(form));
+        const price = calcPrice(data);
+        if (!price) {
+          statusEl.textContent = 'Перевірте дати та тип номера.';
+          return;
+        }
+        statusEl.textContent = 'Надсилаємо...';
+        const message = `📩 Нове бронювання\n👤 Ім’я: ${data.name}\n📞 Телефон: ${data.phone}\n📅 Заїзд: ${data.checkin}\n📅 Виїзд: ${data.checkout}\n🏨 Номер: ${data.room}\n👥 Гостей: ${data.guests}${price.surchargeApplied ? ' (дод. +35% застосовано)' : ''}\n⏳ Ночей: ${price.nights}\n🗓️ Тарифний період: ${price.period.from} — ${price.period.to}\n💰 Базова сума: ${formatUAH(price.base)}\n🎁 Знижка: -${formatUAH(price.discountValue)}\n✅ До оплати: ${formatUAH(price.total)}\n💬 Коментар: ${data.comment || '—'}`;
+        try {
+          const res = await fetch('https://api.telegram.org/bot8520533343:AAHkb0IOwy1FUc9lEa6DDLrLv9U5Ya-zajM/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: '5595772580', text: message }),
+          });
+          if (res.ok) {
+            statusEl.textContent = 'Запит надіслано. Ми скоро зв’яжемось!';
+            form.reset();
+            syncDates();
+            updateFormPrice(form);
+          } else {
+            statusEl.textContent = 'Сталася помилка. Спробуйте ще раз.';
+          }
+        } catch (err) {
+          statusEl.textContent = 'Сталася помилка. Спробуйте ще раз.';
+        }
+      });
+      updateFormPrice(form);
+    });
+</script>
+</body>
+</html>

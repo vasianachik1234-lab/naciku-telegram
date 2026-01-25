@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Меню ресторану “Смак”</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        --bg: #f8f5f0;
+        --card: #ffffff;
+        --text: #1f1b16;
+        --muted: #6b5f52;
+        --accent: #b4512d;
+        --accent-soft: #f2d9cc;
+        --border: #eadfd4;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 64px 24px 40px;
+        text-align: center;
+      }
+
+      header p {
+        max-width: 640px;
+        margin: 16px auto 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .hero {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 20px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        margin-top: 18px;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px 64px;
+      }
+
+      .info-bar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      .info-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px 18px;
+        box-shadow: 0 10px 20px rgba(31, 27, 22, 0.05);
+      }
+
+      .info-card span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .info-card strong {
+        font-size: 1.1rem;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
+
+      .menu-section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 22px;
+        box-shadow: 0 16px 30px rgba(31, 27, 22, 0.08);
+      }
+
+      .menu-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+      }
+
+      .menu-section ul {
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        border-bottom: 1px dashed var(--border);
+        padding-bottom: 10px;
+      }
+
+      .menu-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .menu-item h3 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+
+      .menu-item p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .price {
+        font-weight: 700;
+        color: var(--accent);
+        white-space: nowrap;
+      }
+
+      .cta {
+        margin-top: 40px;
+        padding: 28px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #fff5ef, #ffffff);
+        border: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .cta a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer {
+        padding: 32px 24px 48px;
+        text-align: center;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="hero">Меню дня · Свіжа кухня</span>
+      <h1>Ресторан “Смак”</h1>
+      <p>
+        Сезонні інгредієнти, локальні фермери та тепла атмосфера — оберіть страви,
+        що зроблять ваш вечір особливим.
+      </p>
+    </header>
+
+    <main>
+      <section class="info-bar">
+        <div class="info-card">
+          <span>Години роботи</span>
+          <strong>12:00–23:00</strong>
+        </div>
+        <div class="info-card">
+          <span>Адреса</span>
+          <strong>вул. Затишна, 12</strong>
+        </div>
+        <div class="info-card">
+          <span>Бронювання</span>
+          <strong>+38 (050) 123-45-67</strong>
+        </div>
+      </section>
+
+      <section class="menu-grid">
+        <article class="menu-section">
+          <h2>Закуски</h2>
+          <ul>
+            <li class="menu-item">
+              <div>
+                <h3>Брускета з томатами</h3>
+                <p>Хрусткий хліб, томати, базилік, оливкова олія.</p>
+              </div>
+              <span class="price">120 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Тарілка сирів</h3>
+                <p>Три види сиру, мед, горіхи та сезонні фрукти.</p>
+              </div>
+              <span class="price">210 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Крем-суп із гарбуза</h3>
+                <p>Ніжний суп із насінням, вершками та грінками.</p>
+              </div>
+              <span class="price">145 ₴</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="menu-section">
+          <h2>Салати</h2>
+          <ul>
+            <li class="menu-item">
+              <div>
+                <h3>Цезар з куркою</h3>
+                <p>Ромен, курка гриль, пармезан, домашній соус.</p>
+              </div>
+              <span class="price">185 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Салат із лососем</h3>
+                <p>Слабосолений лосось, авокадо, мікс зелені.</p>
+              </div>
+              <span class="price">240 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Теплий салат з кіноа</h3>
+                <p>Кіноа, печені овочі, соус тахіні.</p>
+              </div>
+              <span class="price">170 ₴</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="menu-section">
+          <h2>Основні страви</h2>
+          <ul>
+            <li class="menu-item">
+              <div>
+                <h3>Стейк з телятини</h3>
+                <p>Подається з бататом та соусом деміглас.</p>
+              </div>
+              <span class="price">420 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Паста з морепродуктами</h3>
+                <p>Креветки, мідії, томатний соус, базилік.</p>
+              </div>
+              <span class="price">310 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Філе дорадо</h3>
+                <p>Запечена риба з лимоном та травами.</p>
+              </div>
+              <span class="price">360 ₴</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="menu-section">
+          <h2>Десерти</h2>
+          <ul>
+            <li class="menu-item">
+              <div>
+                <h3>Чізкейк з ягодами</h3>
+                <p>Ніжний сирний десерт із ягідним соусом.</p>
+              </div>
+              <span class="price">145 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Фондан з шоколаду</h3>
+                <p>Теплий бісквіт із рідкою серединкою.</p>
+              </div>
+              <span class="price">160 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Сорбет манго</h3>
+                <p>Освіжаючий сорбет без доданого цукру.</p>
+              </div>
+              <span class="price">110 ₴</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="menu-section">
+          <h2>Напої</h2>
+          <ul>
+            <li class="menu-item">
+              <div>
+                <h3>Латте з корицею</h3>
+                <p>Кава арабіка, молочна піна, кориця.</p>
+              </div>
+              <span class="price">95 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Лимонад цитрусовий</h3>
+                <p>Апельсин, лимон, м’ята, мінеральна вода.</p>
+              </div>
+              <span class="price">85 ₴</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <h3>Вино келих</h3>
+                <p>Біле або червоне на вибір.</p>
+              </div>
+              <span class="price">140 ₴</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cta">
+        <h2>Забронюйте столик заздалегідь</h2>
+        <p>
+          Ми підготуємо для вас найкраще місце у залі або на терасі. Зателефонуйте або
+          напишіть у месенджер.
+        </p>
+        <a href="tel:+380501234567">📞 Зателефонувати</a>
+      </section>
+    </main>
+
+    <footer>© 2024 Ресторан “Смак”. Всі права захищені.</footer>
+  </body>
+</html>
